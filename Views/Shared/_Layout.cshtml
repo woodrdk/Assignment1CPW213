@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" type="text/css" href="~/css/Style.css">
+    <link rel="shortcut icon" href="~/images/gears.ico">
+</head>
+<body>  
+     
+    <h1>Rob's Car Page</h1>
+    <hr />
+
+    <nav>
+        @Html.ActionLink("Home", "Index", "Home")
+        @Html.ActionLink("My Car", "Cars", "Home")
+        @Html.ActionLink("Contact Us", "Contact", "Home")
+
+        @Html.ActionLink("Previous Cars", "Index", "PrevCars")
+
+    </nav>
+    <hr />
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <hr />
+
+    <footer>
+        <h3>
+            <img src="~/images/dodge.png" alt="Dodge ram logo" /> <br />
+            &copy; Robert Wood Jr. || July 1, 2018
+        </h3>
+    </footer>
+</body>
+</html>
