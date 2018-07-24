@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<h2>Add a link</h2>
+
+@if (ViewBag.LinkAdded != null && ViewBag.LinkAdded)
+{
+    <h3>Link Added Succesfully!</h3>
+}
+else
+{
+
+
+
+    <form method="post">
+        <label for="sn">SiteName: </label>
+        <input type="text" name="sn" />
+        <br />
+
+        <label for="URL">URL: </label>
+        <input type="text" name="URL" />
+        <br />
+
+      
+
+        <input type="submit" name="submit" value="Add Link" />
+    </form>
+}

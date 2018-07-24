@@ -1,0 +1,28 @@
+﻿@model Assignment1CPW213.Models.Information
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@if (ViewBag.Added != null)
+{
+    <h3>Student was added!</h3>
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.SiteName)
+    @Html.TextBoxFor(m => m.SiteName)
+    @Html.ValidationMessageFor(m => m.SiteName)
+    <br />
+
+    @Html.LabelFor(m => m.URL)
+    @Html.TextBoxFor(m => m.URL)
+    @Html.ValidationMessageFor(m => m.URL)
+    <br />
+
+
+    <input type="submit" value="Add Link" />
+    <br />
+}
